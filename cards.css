@@ -72,31 +72,42 @@ main {
    ========================= */
 /* CSS Grid places the cards into columns */
 .card-grid {
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
 }
 
 .card {
-  
+  background-color: rgb(255, 224, 244);
+  border: 1px solid rgb(26, 141, 139);
+  border-radius: 1rem;
+  padding: 1rem;
 
   /* keeps the cards consistent in height */
-  
+  display: flex;
+  flex-direction: column;
+
 }
 
 .card-title {
-
+display: flex;
+align-items: center;
+gap: 0.75rem;
 }
 
 .card-icon {
    /* size of icons */
-  
+ font-size: 200%;
+ line-height: 1;
 }
 
 .card h3 {
-  
+  font-size: 130%;
+  color: rgb(78, 36, 185);
 }
 
 .card p {
-  
+  line-height: 1.5;
 }
 
 
@@ -104,11 +115,18 @@ main {
 /* CALL TO ACTION SECTION
    ========================= */
 .cta-section {
-  
+  background-color:rgb(255, 224, 244);
+  border: 1px solid rgb(26, 141, 139);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
 }
 
 .cta-section h2 {
-  
+  font-size: 150%;
+  color: rgb(78, 36, 185);
+  margin-bottom: 2rem;
 }
 
 .cta-section p {
@@ -116,7 +134,12 @@ main {
 }
 
 .cta-button {
-  
+  display: inline-block;
+  background-color: rgb(255, 0, 157);
+  color: #ebd5ff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
 }
 
 .cta-button:hover {
@@ -143,13 +166,14 @@ footer p {
 
 /* RESPONSIVE MEDIA QUERIES
    ========================= */
-@media (max-width: ) {
+@media (width < 480px) {
   header {
-    
+  flex-direction: column;
+  align-items: center;
   }
 
   .card-grid {
-    
+   grid-template-columns: 1fr; 
   }
 
 }
